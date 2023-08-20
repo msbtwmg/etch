@@ -1,5 +1,5 @@
 let color = "black";
-let click = true;
+let click = false;
 
 function populate(size) {
     let board = document.querySelector('.board');
@@ -27,6 +27,7 @@ function changeSize(input) {
         document.querySelector('.error').style.display = "flex";
     }
 }
+
 function colorSquare() {
     if (click) {
         if (color === "random") {
@@ -51,10 +52,14 @@ document.querySelector("body").addEventListener("click", (e) => {
   if (e.target.tagName != 'BUTTON') {
     click = !click;
     if (click) {
-        document.querySelector(".mode").textContent = "Mode: Coloring";
+        document.body.style.cursor = "pointer";    
     } else {
-        document.querySelector(".mode").textContent = "Mode: Not Coloring";
+        document.body.style.cursor = "alias";
 
     }
   }
 });
+
+const btn = document.querySelector("button");
+
+btn.addEventListener('click',)
